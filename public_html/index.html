@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CC client</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-1.11.3.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="init-page">
+            <input type="text" id="ip" placeholder="ip" value="127.0.0.1"/>
+            <input type="number" id="port" placeholder="port" style="width:70px" value="2234"/>
+            <input type="button" value="connect" id="connect"/>
+        </div>
+        <div class="portal-page" style="display:none">
+            <span>Server : <span class="current-ip-address"></span></span><br/><br/>
+            <input type="text" placeholder="username" id="login-username"/>
+            <input type="password" placeholder="password" id="login-password"/>
+            <input type="button" value="login" id="login"/><br/>
+            <br/>
+            <input type="text" placeholder="username" id="register-username"/>
+            <input type="password" placeholder="password" id="register-password"/>
+            <input type="button" value="register" id="register"/><br/>
+        </div>
+        <div class="chat-page" style="display:none">
+            <span>Server : <span class="current-ip-address"></span></span><br/><br/>
+            <div class="chat-list" style="display:inline-block;max-height: 600px;max-width: 600px;">
+
+            </div>
+            <div class="user-list" style="display:inline-block;max-height: 200px;max-width: 300px;border-left:1px solid black;vertical-align: top;margin-left:20px;min-height: 200px">
+
+            </div><br/>
+            <input type="text" placeholder="message here..." id="chat-input"/>
+        </div>
+        <span id="connect-tooltip" style="color:red"></span>
+    </body>
+</html>
